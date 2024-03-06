@@ -42,11 +42,13 @@ body{
 
 #div_middle_middle{
     display: flex;
+    
 }
 
 #middle_input{
     height: 90%;
     width: 80%;
+    outline: 0;
    
 }
 
