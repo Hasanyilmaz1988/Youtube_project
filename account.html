@@ -6,11 +6,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="youtube.css">
 </head>
-<body>
+<body style="padding: 10px; margin: 10px;">
     
-    <form action="result.html" style="border: 1px solid;">
+    <form action="result.html" method="get" style="border: 1px solid; margin: 10px; padding: 10px;">
         <label for="input_name">Name</label>
-        <input type="text" name="name" id="input_name" required>
+        <input type="text" 
+        name="name" 
+        id="input_name" 
+        required>
+        <!-- novalidate kodu ile alanlari doldurmadan formu gondermeye imkan taniriz -->
+        <!-- no validated kodu ile bos birakilmamasi icin yazdigimiz "required" kodlarinin tamamini tek kod ile iptal edebiliriz -->
 
 
         <br><br><br><br>
@@ -40,6 +45,25 @@
         <br><br><br><br>
 
 
+        <label for="country">Select your country</label>
+        <select name="country" id="select_country">
+            <option selected disabled value="">Countries</option>
+            <!-- disabled kodu ile buradaki satirda yeralan optinion'un secilmesi ozelligini kapatiyoruz -->
+            <option value="Nederland">Nederland</option>
+            <!-- selected value kodu ile otomatik olarak bu secili sekilde kodu acar -->
+            <option value="Germany">Germany</option>
+            <option value="England">England</option>
+            <option value="Turkiye">Turkiye</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Danimark">Danimark</option>
+            <option value="Greece">Greece</option>
+            <option value="italy">italy</option>
+        </select>
+        
+
+        <br><br><br><br>
+
+
         <label for="input_email">Email</label>
         <input type="text" id="input_email" 
         name="email" 
@@ -63,7 +87,8 @@
         <input type="text" 
         id="input_password_check" 
         name="password check" 
-        placeholder="Please enter your Password" required>
+        placeholder="Please enter your Password" autocomplete="off" required>
+        <!-- autocomplate codu ile bosluk alanlari otomatik doldurma islemini iptal ederiz -->
     
 
         <br><br><br><br>
@@ -77,6 +102,19 @@
 
 
         <input type="submit" value="Send">
+
+
+
+        <textarea name="" id="" cols="30" rows="30" placeholder="Please write here max 5000 character" maxlength="30";>
+            <!-- style="text-transform: kodu ile harflerin tamaminin buyuk yada kucuk yazilmasini saglariz -->
+
+
+        </textarea>
+        <!-- maxlength kodu ile buraya max kac harf girilecegini sinirlayabilirsiniz -->
+
+
+
+        <!-- <fieldset></fieldset> kodunu yazip bu kodun icerinine <legend> yazariz. BU KOD ILE BORDER'I YARIDA KESEREK ORAYA SEKILLI BIR SEKILDE YAZI YAZMAYA OLANAK SAGLARIZ  </legend> -->
 
 
 

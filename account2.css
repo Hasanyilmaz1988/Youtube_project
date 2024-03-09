@@ -1,0 +1,108 @@
+main{
+    background-color: orange;
+}
+
+
+#form_action{
+    width: 95vw;
+    height: 95vh;
+    /* background-color: orange; */
+    margin: 5px;
+    padding: 5px;
+}
+
+
+
+#fieldset_one{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    /* background-color: blue; */
+}
+
+#div_top_one{
+    width: 20%;
+    /* background-color: blue; */
+}
+
+#div_top_two{
+    width: 30%;
+    /* background-color: bisque; */
+}
+
+#div_top_three{
+    width: 20%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    /* background-color: brown; */
+}
+
+.div_top_three_buttons{
+    width: 60%;
+}
+
+
+
+#fieldset_two{
+    width: 100%;
+    height: 30%;
+    display: flex;
+}
+
+
+#div_middle_one{
+    width: 20%;
+    /* background-color: green; */
+}
+
+
+#div_middle_two{
+    width: 30%;
+    /* background-color: yellow; */
+}
+
+
+
+#fieldset_three{
+    width: 100%;
+    height: 15%;
+    display: flex;
+}
+
+
+#div_under_one{
+    width: 20%;
+    /* background-color: green; */
+}
+
+
+#div_under_two{
+    width: 5%;
+    /* background-color: yellow; */
+}
+
+
+#div_send_button{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    align-items: end;
+    /* justify-items: right; */
+    /* align-content: end; */
+    justify-content: end;
+    
+}
+
+
+
+.blank{
+    width: 100%;
+}
+
+.blank_field{
+    width: 100%;
+}
