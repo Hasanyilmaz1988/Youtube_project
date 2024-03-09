@@ -16,79 +16,90 @@ main{
 #fieldset_one{
     width: 100%;
     height: 30%;
-    display: flex;
+    /* display: flex; */
     /* background-color: blue; */
 }
 
-#div_top_one{
-    width: 20%;
-    /* background-color: blue; */
-}
 
-#div_top_two{
-    width: 30%;
-    /* background-color: bisque; */
-}
 
-#div_top_three{
-    width: 20%;
-    height: 80%;
+#div_top{
     display: flex;
     flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    /* background-color: brown; */
+    justify-content: space-around;
+    width: 60%;
+    height: 100%;
+    /* background-color: yellow; */
 }
 
-.div_top_three_buttons{
-    width: 60%;
+
+
+.div_top{
+    display: flex;
+    /* height: 20%; */
+    width: 100%;
+    height: 13%;
+    /* background-color: red; */
 }
+
+
+
 
 
 
 #fieldset_two{
     width: 100%;
     height: 30%;
-    display: flex;
+    /* display: flex; */
 }
 
 
-#div_middle_one{
-    width: 20%;
+
+#div_middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60%;
+    height: 100%;
     /* background-color: green; */
 }
 
-
-#div_middle_two{
-    width: 30%;
-    /* background-color: yellow; */
+.div_middle{
+    display: flex;
+    /* height: 20%; */
+    width: 100%;
+    height: 13%;
+    /* background-color: aquamarine; */
 }
-
 
 
 #fieldset_three{
+    height: 20%;
     width: 100%;
-    height: 15%;
+}
+
+
+#div_under{
     display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: space-between;
+    /* background-color: black; */
+}
+
+.div_under{
+    display: flex;
+    /* background-color: aqua; */
 }
 
 
-#div_under_one{
-    width: 20%;
-    /* background-color: green; */
-}
 
-
-#div_under_two{
-    width: 5%;
-    /* background-color: yellow; */
-}
 
 
 #div_send_button{
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 50%;
     /* background-color: blue; */
     align-items: end;
     /* justify-items: right; */
@@ -100,9 +111,22 @@ main{
 
 
 .blank{
-    width: 100%;
+    width: 40%;
 }
 
+
+
 .blank_field{
-    width: 100%;
+    width: 30%;
+}
+
+
+.div_top_three_buttons{
+    width: 20%;
+    /* border: 5px solid white; */
+}
+
+
+.checkbox{
+    width: 2%;
 }
