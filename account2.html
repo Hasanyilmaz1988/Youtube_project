@@ -53,22 +53,37 @@
 
             <fieldset id="fieldset_two">
                 <legend>Prive information</legend>
+                <!-- buraya yazacagimiz MARGIN kodu ile bu yaziyi border icerisinde istedigimiz yere kaydirabiliriz -->
+
+                <!-- NOVALIDATE kodu ile inputlara yazdigimiz REQUIRED kodlarinin tamamini iptal edebiliriz -->
                 
                 <div id="div_middle">
                     <div class="div_middle">
                         <label for="birth_date" class="blank">Birth date</label>
-                        <input type="date" name="birth_date" id="birth_date" class="blank_field" required>
+                        <input type="date" name="birth_date" id="birth_date" class="blank_field" min="2023-01-01" max="2024-01-01" required>
+                        <!-- date kodunun icerisine yazdigimiz MIN ve MAX kodu ile bir tarih araligi belirtebiliriz, sadece bu secilebilir -->
                     </div>
                     
                     <div class="div_middle">
                         <label for="language" class="blank">Language</label>
                         <select name="language" id="language" class="blank_field">
-                            <option selected disabled value="language">Choice language</option>
-                            <option value="language">Turkish</option>
-                            <option value="language">Engels</option>
-                            <option value="language">Deutsch</option>
-                            <option value="language">Nederlands</option>
-                            <option value="language">Arabish</option>
+                            <!-- buraya yazdigimiz MULTIPLE kodu ile birden fazla secenek secmeye izin verebiliyoruz -->
+                            <optgroup class="option_group" label="mother language">
+                                <!-- <option selected disabled value="language">Choice language</option> -->
+                                <option class="language" value="language">Turkish</option>
+                                <option class="language" value="language">Engels</option>
+                                <option class="language" value="language">Deutsch</option>
+                                <option class="language" value="language">Nederlands</option>
+                                <option class="language" value="language">Arabish</option>
+                            </optgroup>
+                            <optgroup class="option_group" label="second language">
+                                <!-- <option selected disabled value="language">Choice language</option> -->
+                                <option class="language" value="language">Turkish</option>
+                                <option class="language" value="language">Engels</option>
+                                <option class="language" value="language">Deutsch</option>
+                                <option class="language" value="language">Nederlands</option>
+                                <option class="language" value="language">Arabish</option>
+                            </optgroup>
                         </select>
                     </div>
                     
@@ -86,10 +101,17 @@
                         <label for="profession" class="blank">Profession</label>
                         <input type="profession" name="profession" id="profession" class="blank_field" required>
                     </div>
+
+                    <div class="div_middle">
+                        <label for="file" class="blank">Upload your cv</label>
+                        <input type="file" name="file" id="file" class="blank_field" multiple>
+
+                    </div>
                     
                     <div class="div_middle">
                         <label for="hobbies" class="blank">Hobbies</label>
-                        <input type="hobbies" name="hobbies" id="hobbies" class="blank_field" required>
+                        <input type="hobbies" name="hobbies" id="hobbies" class="blank_field" required  placeholder="max 3 hobbies">
+                        <!-- buradaki PLACEHOLDER kodu ile inputun icerisinde kullaniciya bir not gosteririz -->
                     </div>
                 </div>
 
@@ -111,6 +133,19 @@
                         </div>
 
                         <div class="div_under">
+                            <label for="range">Age</label>
+                            <input type="range" 
+                            name="range" 
+                            id="range" 
+                            min="18" 
+                            max="98"
+                            oninput="account_age.innerText = this.value"
+                            >
+                            <!-- buradaki ONINPUT kodu ile range'i sectigimizde hangi rakami sectigimizi gormemizi saglariz -->
+                            <span id="account_age">40</span>
+                        </div>
+
+                        <div class="div_under">
                             <label for="website" class="blank">I want to try it</label>
                             <input type="checkbox" name="try_it" id="checkbox_3"  class="checkbox">
                         </div>
@@ -120,21 +155,62 @@
                             <input type="checkbox" name="use_it" id="checkbox_4"  class="checkbox">
                         </div>
                         
-                        <div class="div_under">
+                        <!-- <div class="div_under">
                             <label for="website" class="blank">I accept the privacy terms</label>
                             <input type="checkbox" name="accept_it" id="checkbox_5"  class="checkbox"> 
+                        </div> -->
+                        <div id="div_datalist">
+                            <input type="text" list="datalist" name="datalist" placeholder="Select your work area">
+                            <!-- input'un icerisine READONLY yazarsak eger bu input'u sadece okuyabiliriz, islem yapamayiz -->
+                            <!-- kodun icerisine DISABLED yazdigimizda ise pasif/silik bir sekilde gorunur, yine islem yapilamaz -->
+                                <datalist id="datalist" name="datalist">Select work area
+                                    <option class="datalist_city" value="Amsterdam">Amsterdam</option>
+                                    <option class="datalist_city" value="Rotterdam">Rotterdam</option>
+                                    <option class="datalist_city" value="Den haag">Den haag</option>
+                                    <option class="datalist_city" value="Utrecht">Utrecht</option>
+                                </datalist> 
                         </div>
                     </div>
+
+                    <div id="div_reset_button">
+                        <input id="reset_button" type="reset" value="reset">
+                    </div>
+
                     <div id="div_send_button">
                         <input id="send_button" type="submit" value="Send">
                     </div>
+                    
             </fieldset>
 
         </form>
 
             
-        
+
+            
+
+
     </main>
+
+
+    <script>
+        var reset = document.getElementById("reset_button");
+
+        reset.onclick = function() {
+            confirm("are you sure");
+        }
+
+        var range = document.getElementById("range");
+        var account_age = document.getElementById("account_age");
+
+        range.oninput = function() {
+        account_age.innerText = this.value;
+        }
+
+
+
+    </script>
+
+
 
 </body>
 </html>

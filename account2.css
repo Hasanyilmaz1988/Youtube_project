@@ -39,6 +39,7 @@ main{
     width: 100%;
     height: 13%;
     /* background-color: red; */
+    /* justify-content: space-evenly; */
 }
 
 
@@ -99,9 +100,22 @@ main{
 #div_send_button{
     display: flex;
     width: 100%;
-    height: 50%;
+    height: 20%;
     /* background-color: blue; */
     align-items: end;
+    /* justify-items: right; */
+    /* align-content: end; */
+    justify-content: end;
+    
+}
+
+
+#div_reset_button{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    /* background-color: blue; */
+    align-items: center;
     /* justify-items: right; */
     /* align-content: end; */
     justify-content: end;
@@ -112,21 +126,39 @@ main{
 
 .blank{
     width: 40%;
+    /* background-color: aquamarine; */
 }
 
 
 
 .blank_field{
     width: 30%;
+    /* background-color: blueviolet; */
 }
 
 
 .div_top_three_buttons{
     width: 20%;
+    /* background-color: brown; */
     /* border: 5px solid white; */
+
 }
 
 
 .checkbox{
     width: 2%;
+}
+
+#div_datalist{
+    /* width: 40%; */
+    /* height: 40%; */
+    /* background-color: blueviolet; */
+}
+
+.option_group{
+    background-color: brown;
+}
+
+.language{
+    background: white;
 }
